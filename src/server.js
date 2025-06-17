@@ -1,16 +1,18 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import userRoutes from './routes/userRoutes.js';
 
 dotenv.config();
 
 const app = express();
-const PORT = 3000;
+app.use(express.json());
 
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('MongoDB conectado'))
-  .catch(err => console.error(err));
+  .catch((err) => console.error('Erro ao conectar ao MongoDB:', err));
 
-app.use(express.json());
-app.get('/', (req, res) => res.send('API de academia funcionando'));
+app.use('/api/users', userRoutes);
+
+const PORT = 3000;
 app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
