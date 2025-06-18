@@ -26,7 +26,7 @@ API RESTful em Node.js com Express, MongoDB (via Mongoose) e autenticação JWT 
 
 ## ⚙️ Tecnologias
 
-* Node.js com módulos ES (`import`)
+* Node.js
 * Express para rotas HTTP
 * MongoDB (Atlas / local) com Mongoose
 * Autenticação JWT
@@ -56,6 +56,8 @@ API RESTful em Node.js com Express, MongoDB (via Mongoose) e autenticação JWT 
 
    O servidor rodará em `http://localhost:3000`.
 
+5. Teste a API com o Postman:
+    -  [Coleção pública no Postman](https://www.postman.com/esquadrao-scd/gym-api/overview)
 
 ## 🔐 Variáveis de ambiente
 
